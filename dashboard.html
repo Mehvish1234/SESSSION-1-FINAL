@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="static/styles.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">ShopStyle</div>
+    <ul class="nav-links">
+      <li><a href="dashboard.html" class="active">Dashboard</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="index.html">Logout</a></li> <!-- Logout will just redirect to home in static -->
+    </ul>
+  </nav>
+
+  <main style="padding: 2rem; max-width: 1200px; margin: 0 auto;">
+    <div class="dashboard-header" style="margin-bottom: 2rem;">
+      <h1>Welcome back, John Doe!</h1>
+      <p style="color: #666; margin-top: 0.5rem;">Manage your account and view your shopping activity</p>
+    </div>
+
+    <div class="dashboard-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
+      <!-- Account Info Card -->
+      <div class="dashboard-card" style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+        <h3 style="margin-top: 0; color: #333;">Account Information</h3>
+        <p><strong>Name:</strong> John Doe</p>
+        <p><strong>Email:</strong> johndoe@example.com</p>
+        <p><strong>Member since:</strong> January 2024</p>
+      </div>
+
+      <!-- Shopping Stats Card -->
+      <div class="dashboard-card" style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+        <h3 style="margin-top: 0; color: #333;">Shopping Summary</h3>
+        <p><strong>Items in Cart:</strong> 2</p>
+        <p><strong>Total Orders:</strong> 3</p>
+        <div style="margin-top: 1rem;">
+          <a href="shop.html" class="cta-primary" style="display: inline-block; background: #2563eb; color: white; padding: 0.75rem 1.5rem; text-decoration: none; border-radius: 5px;">Continue Shopping</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Recent Orders Section -->
+    <div class="recent-orders" style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+      <h3 style="margin-top: 0; color: #333;">Recent Orders</h3>
+      <div class="orders-list">
+        <div class="order-item" style="border-bottom: 1px solid #eee; padding: 1rem 0;">
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <div>
+              <strong>Order #12345</strong>
+              <span style="margin-left: 1rem; color: #666;">June 01, 2025</span>
+            </div>
+            <div style="text-align: right;">
+              <div><strong>$49.99</strong></div>
+              <div style="color: #666; font-size: 0.9rem; text-transform: capitalize;">Shipped</div>
+            </div>
+          </div>
+        </div>
+        <div class="order-item" style="border-bottom: 1px solid #eee; padding: 1rem 0;">
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <div>
+              <strong>Order #12344</strong>
+              <span style="margin-left: 1rem; color: #666;">May 20, 2025</span>
+            </div>
+            <div style="text-align: right;">
+              <div><strong>$89.50</strong></div>
+              <div style="color: #666; font-size: 0.9rem; text-transform: capitalize;">Delivered</div>
+            </div>
+          </div>
+        </div>
+        <div class="order-item" style="padding: 1rem 0;">
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <div>
+              <strong>Order #12343</strong>
+              <span style="margin-left: 1rem; color: #666;">May 05, 2025</span>
+            </div>
+            <div style="text-align: right;">
+              <div><strong>$29.00</strong></div>
+              <div style="color: #666; font-size: 0.9rem; text-transform: capitalize;">Pending</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- If there were no orders, show this section instead -->
+    <!--
+    <div class="no-orders" style="background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); text-align: center;">
+      <h3 style="color: #666;">No orders yet</h3>
+      <p style="color: #999; margin-bottom: 1.5rem;">Start shopping to see your orders here!</p>
+      <a href="shop.html" class="cta-primary" style="display: inline-block; background: #2563eb; color: white; padding: 0.75rem 1.5rem; text-decoration: none; border-radius: 5px;">Browse Products</a>
+    </div>
+    -->
+
+  </main>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shop - ShopStyle</title>
+  <link rel="stylesheet" href="static/styles.css" />
+  <link rel="stylesheet" href="static/shop.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">
+      <i class="fas fa-shopping-bag"></i>
+      ShopStyle
+    </div>
+    <button class="mobile-filter-toggle" id="mobileFilterToggle">
+      <i class="fas fa-filter"></i>
+    </button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#features">Features</a></li>
+      <li><a href="shop.html" class="active">Shop</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="dashboard.html">Dashboard</a></li>
+    </ul>
+    <div class="nav-buttons">
+      <a href="login.html" class="nav-button login-btn">Login</a>
+      <a href="signup.html" class="nav-button signup-btn">Sign Up</a>
+      <div class="cart-icon" id="cartIcon">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="cart-count">0</span>
+      </div>
+    </div>
+  </nav>
+
+  <main class="shop-container">
+    <aside class="filters" id="filters">
+      <div class="filter-header">
+        <h3>Filters</h3>
+        <button class="close-filters" id="closeFilters">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="filter-section">
+        <h3>Categories</h3>
+        <div class="filter-options">
+          <label><input type="checkbox" value="all" checked> All</label>
+          <label><input type="checkbox" value="electronics"> Electronics</label>
+          <label><input type="checkbox" value="clothing"> Clothing</label>
+          <label><input type="checkbox" value="accessories"> Accessories</label>
+        </div>
+      </div>
+      <div class="filter-section">
+        <h3>Price Range</h3>
+        <div class="price-range">
+          <input type="range" id="priceRange" min="0" max="1000" step="10" value="1000">
+          <div class="price-inputs">
+            <input type="number" id="minPrice" placeholder="Min" min="0">
+            <span>-</span>
+            <input type="number" id="maxPrice" placeholder="Max" max="1000">
+          </div>
+        </div>
+      </div>
+      <button class="apply-filters">Apply Filters</button>
+    </aside>
+
+    <div class="filter-overlay" id="filterOverlay"></div>
+
+    <section class="products-section">
+      <div class="products-header">
+        <h2>Our Products</h2>
+        <div class="sort-filter">
+          <select id="sortProducts">
+            <option value="featured">Featured</option>
+            <option value="price-low">Price: Low to High</option>
+            <option value="price-high">Price: High to Low</option>
+            <option value="name-asc">Name: A to Z</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="products-grid" id="productsGrid">
+        <!-- Product cards will be dynamically inserted here -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Shopping Cart Sidebar -->
+  <div class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h3>Shopping Cart</h3>
+      <button class="close-cart" id="closeCart">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <!-- Cart items will be dynamically inserted here -->
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total:</span>
+        <span id="cartTotal">$0.00</span>
+      </div>
+      <button class="checkout-button">Proceed to Checkout</button>
+    </div>
+  </div>
+
+  <div class="cart-overlay" id="cartOverlay"></div>
+
+  <script src="static/shop.js"></script>
+</body>
+</html>
